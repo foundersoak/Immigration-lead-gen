@@ -1,0 +1,42 @@
+name: Refresh Visa Bulletin
+
+# Runs mid-month (when the next Visa Bulletin posts) and appends the new month's
+# Final Action Dates. The fetcher is append-only, strictly validated, and fail-safe,
+# so running it repeatedly is harmless: it only commits when there is a valid new month.
+# A commit to main triggers the Deploy workflow, which rebuilds and publishes.
+
+on:
+  schedule:
+    - cron: "0 15 9-23 * *" # 15:00 UTC, days 9-23 each month — catches the bulletin whenever it posts
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+concurrency:
+  group: bulletin-refresh
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+      - name: Parser self-test (guard)
+        run: node scripts/fetch-bulletin.js --selftest
+      - name: Fetch latest Visa Bulletin (append-only)
+        run: node scripts/fetch-bulletin.js
+      - name: Commit if changed
+        run: |
+          if [ -n "$(git status --porcelain data/visa-bulletin.json)" ]; then
+            git config user.name "visa-bulletin-bot"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add data/visa-bulletin.json
+            git commit -m "Auto: update Visa Bulletin data"
+            git push
+          else
+            echo "No new bulletin to add."
+          fi

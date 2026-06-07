@@ -1,0 +1,11 @@
+{
+  "name": "visa-timeline-site",
+  "private": true,
+  "version": "0.1.0",
+  "description": "Static immigration timeline + odds calculator site (green card wait estimator, H-1B odds), monetized via display ads and qualified attorney leads.",
+  "scripts": {
+    "build": "node scripts/build.js",
+    "test": "node tools/test-calculator.js"
+  },
+  "license": "UNLICENSED"
+}

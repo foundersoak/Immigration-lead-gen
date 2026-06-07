@@ -1,0 +1,18 @@
+# Dependencies
+node_modules/
+
+# Local machine-specific Claude settings (keep launch.json, ignore local overrides)
+.claude/settings.local.json
+
+# OS / editor junk
+.DS_Store
+Thumbs.db
+*.log
+
+# Research scratch / downloaded source documents (not part of the site)
+*.pdf
+nfap_text.txt
+parse_nfap.py
+
+# Strategy/research docs — kept LOCAL only, never published to the public repo
+research/

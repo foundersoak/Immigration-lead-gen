@@ -1,0 +1,220 @@
+{
+  "_comment": "Single source of truth for entity pages. Edit items here (or via scripts/add-items.js) and run `node scripts/build.js`. Generated HTML is never edited by hand. 'kind' drives the page template: 'bulletin' pages tie to a (category,country) series in visa-bulletin.json and show a priority-date tool; 'explainer' pages are SEO content + a lead CTA.",
+  "updated": "2026-06-07",
+  "groups": {
+    "employment-based": { "name": "Employment-Based Green Cards", "short": "Green cards", "blurb": "Permanent residence through employment (EB-1 through EB-5)." },
+    "work-visas": { "name": "Work Visas (Nonimmigrant)", "short": "Work visas", "blurb": "Temporary visas that let you work in the U.S." }
+  },
+  "items": [
+    {
+      "slug": "eb2-india",
+      "name": "EB-2 India",
+      "group": "employment-based",
+      "kind": "bulletin",
+      "category": "EB2",
+      "country": "India",
+      "blurb": "Employment-based second preference for India-born applicants — one of the most backlogged categories in the Visa Bulletin, with waits commonly measured in years.",
+      "reported": true,
+      "source": "DOS Visa Bulletin",
+      "sourceUrl": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin.html"
+    },
+    {
+      "slug": "eb3-india",
+      "name": "EB-3 India",
+      "group": "employment-based",
+      "kind": "bulletin",
+      "category": "EB3",
+      "country": "India",
+      "blurb": "Employment-based third preference for India-born applicants. EB-3 and EB-2 India cutoffs often cross, which is why some applicants consider an EB-3 downgrade.",
+      "reported": true,
+      "source": "DOS Visa Bulletin",
+      "sourceUrl": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin.html"
+    },
+    {
+      "slug": "eb1-india",
+      "name": "EB-1 India",
+      "group": "employment-based",
+      "kind": "bulletin",
+      "category": "EB1",
+      "country": "India",
+      "blurb": "Employment-based first preference for India-born applicants (extraordinary ability, outstanding researchers, multinational managers).",
+      "reported": true,
+      "source": "DOS Visa Bulletin",
+      "sourceUrl": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin.html"
+    },
+    {
+      "slug": "eb2-china",
+      "name": "EB-2 China",
+      "group": "employment-based",
+      "kind": "bulletin",
+      "category": "EB2",
+      "country": "China",
+      "blurb": "Employment-based second preference for China (mainland-born) applicants — a heavily backlogged category second only to India.",
+      "reported": true,
+      "source": "DOS Visa Bulletin",
+      "sourceUrl": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin.html"
+    },
+    {
+      "slug": "eb3-china",
+      "name": "EB-3 China",
+      "group": "employment-based",
+      "kind": "bulletin",
+      "category": "EB3",
+      "country": "China",
+      "blurb": "Employment-based third preference for China (mainland-born) applicants.",
+      "reported": true,
+      "source": "DOS Visa Bulletin",
+      "sourceUrl": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin.html"
+    },
+    {
+      "slug": "eb1-china",
+      "name": "EB-1 China",
+      "group": "employment-based",
+      "kind": "bulletin",
+      "category": "EB1",
+      "country": "China",
+      "blurb": "Employment-based first preference for China (mainland-born) applicants.",
+      "reported": true,
+      "source": "DOS Visa Bulletin",
+      "sourceUrl": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin.html"
+    },
+    {
+      "slug": "eb2-all-other",
+      "name": "EB-2 (All Other Countries)",
+      "group": "employment-based",
+      "kind": "bulletin",
+      "category": "EB2",
+      "country": "AllOther",
+      "blurb": "Employment-based second preference for applicants chargeable to all countries other than India, China, Mexico and the Philippines.",
+      "reported": true,
+      "source": "DOS Visa Bulletin",
+      "sourceUrl": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin.html"
+    },
+    {
+      "slug": "eb3-all-other",
+      "name": "EB-3 (All Other Countries)",
+      "group": "employment-based",
+      "kind": "bulletin",
+      "category": "EB3",
+      "country": "AllOther",
+      "blurb": "Employment-based third preference for applicants chargeable to all countries other than the backlogged ones.",
+      "reported": true,
+      "source": "DOS Visa Bulletin",
+      "sourceUrl": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin.html"
+    },
+    {
+      "slug": "eb2-mexico",
+      "name": "EB-2 Mexico",
+      "group": "employment-based",
+      "kind": "bulletin",
+      "category": "EB2",
+      "country": "Mexico",
+      "blurb": "Employment-based second preference for Mexico-born applicants.",
+      "reported": true,
+      "source": "DOS Visa Bulletin",
+      "sourceUrl": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin.html"
+    },
+    {
+      "slug": "eb2-philippines",
+      "name": "EB-2 Philippines",
+      "group": "employment-based",
+      "kind": "bulletin",
+      "category": "EB2",
+      "country": "Philippines",
+      "blurb": "Employment-based second preference for Philippines-born applicants.",
+      "reported": true,
+      "source": "DOS Visa Bulletin",
+      "sourceUrl": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin.html"
+    },
+    {
+      "slug": "eb-1a-extraordinary-ability",
+      "name": "EB-1A Extraordinary Ability",
+      "group": "employment-based",
+      "kind": "explainer",
+      "blurb": "A self-petitioned green card for people at the very top of their field — no employer or labor certification required.",
+      "reported": false,
+      "source": "USCIS",
+      "sourceUrl": "https://www.uscis.gov/working-in-the-united-states/permanent-workers/employment-based-immigration-first-preference-eb-1"
+    },
+    {
+      "slug": "eb-2-niw",
+      "name": "EB-2 National Interest Waiver (NIW)",
+      "group": "employment-based",
+      "kind": "explainer",
+      "blurb": "An EB-2 green card that waives the job-offer and labor-certification requirement when your work is in the national interest. Popular with researchers, founders and skilled professionals.",
+      "reported": false,
+      "source": "USCIS",
+      "sourceUrl": "https://www.uscis.gov/working-in-the-united-states/permanent-workers/employment-based-immigration-second-preference-eb-2"
+    },
+    {
+      "slug": "perm-labor-certification",
+      "name": "PERM Labor Certification",
+      "group": "employment-based",
+      "kind": "explainer",
+      "blurb": "The Department of Labor step most EB-2 and EB-3 cases start with — it sets your priority date.",
+      "reported": false,
+      "source": "U.S. Department of Labor",
+      "sourceUrl": "https://flag.dol.gov/programs/PERM"
+    },
+    {
+      "slug": "eb-5-investor",
+      "name": "EB-5 Immigrant Investor",
+      "group": "employment-based",
+      "kind": "explainer",
+      "blurb": "A green card through a qualifying U.S. investment that creates jobs. Has its own reserved visa categories and priority-date dynamics.",
+      "reported": false,
+      "source": "USCIS",
+      "sourceUrl": "https://www.uscis.gov/working-in-the-united-states/permanent-workers/employment-based-immigration-fifth-preference-eb-5"
+    },
+    {
+      "slug": "h-1b-visa",
+      "name": "H-1B Specialty Occupation Visa",
+      "group": "work-visas",
+      "kind": "explainer",
+      "blurb": "The main employer-sponsored work visa for specialty occupations — allocated by an annual lottery now weighted by wage level.",
+      "reported": false,
+      "source": "USCIS",
+      "sourceUrl": "https://www.uscis.gov/working-in-the-united-states/temporary-workers/h-1b-specialty-occupations"
+    },
+    {
+      "slug": "o-1-visa",
+      "name": "O-1 Extraordinary Ability Visa",
+      "group": "work-visas",
+      "kind": "explainer",
+      "blurb": "A work visa for individuals with extraordinary ability or achievement — a common path when the H-1B lottery doesn't come through. No annual cap.",
+      "reported": false,
+      "source": "USCIS",
+      "sourceUrl": "https://www.uscis.gov/working-in-the-united-states/temporary-workers/o-1-visa-individuals-with-extraordinary-ability-or-achievement"
+    },
+    {
+      "slug": "l-1-visa",
+      "name": "L-1 Intracompany Transfer Visa",
+      "group": "work-visas",
+      "kind": "explainer",
+      "blurb": "For employees transferring from a foreign office to a related U.S. office. A frequent H-1B alternative for multinational employers.",
+      "reported": false,
+      "source": "USCIS",
+      "sourceUrl": "https://www.uscis.gov/working-in-the-united-states/temporary-workers/l-1a-intracompany-transferee-executive-or-manager"
+    },
+    {
+      "slug": "tn-visa",
+      "name": "TN Visa (USMCA Professionals)",
+      "group": "work-visas",
+      "kind": "explainer",
+      "blurb": "A work visa for Canadian and Mexican professionals under USMCA. No lottery and no annual cap.",
+      "reported": false,
+      "source": "USCIS",
+      "sourceUrl": "https://www.uscis.gov/working-in-the-united-states/temporary-workers/tn-nafta-professionals"
+    },
+    {
+      "slug": "cap-exempt-h-1b",
+      "name": "Cap-Exempt H-1B",
+      "group": "work-visas",
+      "kind": "explainer",
+      "blurb": "Universities, nonprofit research organizations and affiliated employers can sponsor H-1Bs outside the lottery, all year round.",
+      "reported": false,
+      "source": "USCIS",
+      "sourceUrl": "https://www.uscis.gov/working-in-the-united-states/temporary-workers/h-1b-specialty-occupations"
+    }
+  ]
+}
