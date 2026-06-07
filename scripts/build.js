@@ -425,10 +425,43 @@ function guidePage(g) {
     ${leadForm(prefix, g.title)}
   ` + foot(prefix);
 }
+/* Guide categories. Each guide slug maps to a section; the order of GUIDE_SECTIONS
+   sets the on-page order, and the order of slugs within sets card order.
+   Any guide not listed here falls into the "More guides" catch-all so new
+   articles never silently disappear from the index. */
+const GUIDE_SECTIONS = [
+  { title: 'Visa Bulletin basics', blurb: 'Read the monthly bulletin and know where you stand.', slugs: [
+    'how-to-read-the-visa-bulletin', 'what-is-retrogression', 'dates-for-filing-vs-final-action' ] },
+  { title: 'The India &amp; China backlog', blurb: 'Why the wait is so long, and how the per-country caps work.', slugs: [
+    'why-india-green-card-wait-so-long', 'china-green-card-backlog', 'cross-chargeability-spouse-country' ] },
+  { title: 'Speeding up your case', blurb: 'Categories and strategies that can move you up the line.', slugs: [
+    'eb2-vs-eb3-downgrade', 'eb1-for-indians', 'eb2-niw-india-does-it-help', 'eb5-india-china-backlog-workaround' ] },
+  { title: 'The H-1B lottery', blurb: 'Your odds, the new rules, and what to do if you are not selected.', slugs: [
+    'fy2027-h1b-wage-weighted-lottery', 'h1b-not-selected-options', 'new-100k-h1b-fee' ] },
+  { title: 'When life changes', blurb: 'Job changes, layoffs and children aging out.', slugs: [
+    'job-change-ac21-portability', 'cspa-aging-out-children' ] },
+];
 function guidesIndex() {
   const prefix = '../';
   const url = `${SITE_URL}/guides/`;
-  const cards = GUIDES.map(g => `<a class="guide-card" href="${prefix}guide/${g.slug}/index.html"><strong>${esc(g.title)}</strong><span>${esc(g.desc)}</span></a>`).join('');
+  const bySlug = new Map(GUIDES.map(g => [g.slug, g]));
+  const used = new Set();
+  const card = g => `<a class="guide-card" href="${prefix}guide/${g.slug}/index.html"><strong>${esc(g.title)}</strong><span>${esc(g.desc)}</span></a>`;
+  const sections = GUIDE_SECTIONS.map(sec => {
+    const items = sec.slugs.map(s => bySlug.get(s)).filter(Boolean);
+    items.forEach(g => used.add(g.slug));
+    if (!items.length) return '';
+    return `<section class="container narrow guide-section">
+      <h2>${sec.title}</h2>
+      <p class="guide-section-sub">${sec.blurb}</p>
+      <div class="guide-list">${items.map(card).join('')}</div>
+    </section>`;
+  }).join('');
+  const leftovers = GUIDES.filter(g => !used.has(g.slug));
+  const more = leftovers.length ? `<section class="container narrow guide-section">
+      <h2>More guides</h2>
+      <div class="guide-list">${leftovers.map(card).join('')}</div>
+    </section>` : '';
   return head({
     title: `Green Card & Visa Guides | ${BRAND}`,
     desc: `Plain-English guides to the Visa Bulletin, priority dates, retrogression, the H-1B lottery, and your options when things change.`,
@@ -438,7 +471,7 @@ function guidesIndex() {
       <h1>Green card &amp; visa guides</h1>
       <p class="entity-sub">Plain-English explainers on the Visa Bulletin, priority dates and your options.</p>
     </section>
-    <section class="container narrow"><div class="guide-list">${cards}</div></section>
+    ${sections}${more}
   ` + foot(prefix);
 }
 
