@@ -31,7 +31,7 @@ const GUIDES = require('./guides-content.js');
 const SITE_URL = 'https://greencardeta.com';      // no trailing slash; set to your domain
 const BRAND = 'GreenCardETA';                       // placeholder brand; swap once you pick a name
 const BRAND_TAGLINE = 'Know your green card timeline.';
-const ADSENSE_CLIENT = 'ca-pub-XXXXXXXXXXXXXXXX'; // your AdSense publisher id
+const ADSENSE_CLIENT = 'ca-pub-6381950276439830'; // your AdSense publisher id
 const FORMSPREE = 'https://formspree.io/f/xojzegbv'; // your lead/email endpoint
 const GA4_ID = 'G-V7X4B4EYCT';                    // Google Analytics 4 Measurement ID ('' to disable)
 const GSC_VERIFICATION = '';                      // Search Console HTML-tag token ('' to disable)
@@ -149,9 +149,9 @@ function head(opts) {
 }
 
 function adUnit() {
-  if (ADSENSE_CLIENT.indexOf('XXXX') !== -1) return '';
-  return `<div class="container ad-wrap"><p class="ad-label">Advertisement</p>
-    <ins class="adsbygoogle ad-inline" style="display:block" data-ad-client="${ADSENSE_CLIENT}" data-ad-slot="0000000000" data-ad-format="auto" data-full-width-responsive="true"></ins></div>`;
+  // Rely on Auto ads (Google auto-places once approved). Manual <ins> units need real slot IDs,
+  // so we render nothing here for now to avoid empty "Advertisement" boxes. Wire real slots later.
+  return '';
 }
 
 function foot(prefix) {
