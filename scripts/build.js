@@ -172,7 +172,7 @@ function foot(prefix) {
       </nav>
     </div>
     <div class="container footer-bottom">
-      <p>© ${new Date().getFullYear()} ${esc(BRAND)}. Estimates are informational only, based on published USCIS and U.S. Department of State data and historical trends. This is not legal advice and no attorney-client relationship is created. Wait-time projections are not guarantees; priority dates can move backward (retrogression). Not affiliated with USCIS, the Department of State, or any government agency. We may share inquiries you submit with one or more partner immigration law firms who may contact you by email. Data updated ${esc(UPDATED)}.</p>
+      <p>© ${new Date().getFullYear()} ${esc(BRAND)}. Estimates are informational only, based on published USCIS and U.S. Department of State data and historical trends. This is not legal, financial, or tax advice, and no attorney-client relationship is created. Wait-time projections are not guarantees; priority dates can move backward (retrogression). Not affiliated with USCIS, the Department of State, or any government agency. We may share inquiries you submit with one or more partner immigration law firms who may contact you by email. Data updated ${esc(UPDATED)}.</p>
     </div>
   </footer>
   <script src="${prefix}assets/js/calculator.js?v=${ASSET_VER}" defer></script>
