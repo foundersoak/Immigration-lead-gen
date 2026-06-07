@@ -33,7 +33,7 @@ const BRAND = 'GreenCardETA';                       // placeholder brand; swap o
 const BRAND_TAGLINE = 'Know your green card timeline.';
 const ADSENSE_CLIENT = 'ca-pub-XXXXXXXXXXXXXXXX'; // your AdSense publisher id
 const FORMSPREE = 'https://formspree.io/f/xojzegbv'; // your lead/email endpoint
-const GA4_ID = 'G-XXXXXXXXXX';                    // Google Analytics 4 Measurement ID ('' to disable)
+const GA4_ID = 'G-V7X4B4EYCT';                    // Google Analytics 4 Measurement ID ('' to disable)
 const GSC_VERIFICATION = '';                      // Search Console HTML-tag token ('' to disable)
 const UPDATED = DATA.updated || BULLETIN.updated || '2026-06-07';
 
