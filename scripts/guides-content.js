@@ -1,5 +1,5 @@
 /* ============================================================
-   VisaClock - guide articles (un-gated SEO content)
+   GreenCardETA - guide articles (un-gated SEO content)
    Each guide: { slug, title, desc, date, body }  (body = HTML)
    In-body links use ../../ because guides render at /guide/<slug>/.
    Keep sourced and current; update dates when you revise.

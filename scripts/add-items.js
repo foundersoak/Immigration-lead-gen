@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /* ============================================================
-   VisaClock - batch importer for entity items.
+   GreenCardETA - batch importer for entity items.
    Validates a research batch, auto-slugs, de-dupes by slug,
    merges into data/items.json, and rebuilds.
    Usage:  node scripts/add-items.js path/to/batch.json

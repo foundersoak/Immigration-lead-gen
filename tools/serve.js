@@ -26,4 +26,4 @@ http.createServer((req, res) => {
       res.end(data);
     });
   });
-}).listen(PORT, () => console.log('VisaClock preview on http://localhost:' + PORT));
+}).listen(PORT, () => console.log('GreenCardETA preview on http://localhost:' + PORT));

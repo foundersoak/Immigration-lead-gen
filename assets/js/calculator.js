@@ -1,5 +1,5 @@
 /* ============================================================
-   VisaClock - calculators (green card wait + H-1B odds),
+   GreenCardETA - calculators (green card wait + H-1B odds),
    email gate, lead capture, tabs.
    Shared state + loaders are declared ABOVE all callers so a
    load-order/hoisting bug can't kill the whole script.
@@ -152,7 +152,7 @@
     set('.gc-f-category', res.category);
     set('.gc-f-country', res.countryLabel);
     set('.gc-f-estimate', est);
-    set('.gc-f-subject', 'VisaClock lead: ' + res.category.replace('EB', 'EB-') + ' ' + res.countryLabel + ' — ' + est);
+    set('.gc-f-subject', 'GreenCardETA lead: ' + res.category.replace('EB', 'EB-') + ' ' + res.countryLabel + ' — ' + est);
     set('.gc-f-page', location.pathname);
   }
 
@@ -247,7 +247,7 @@
       set('.h1b-f-wage', 'Level ' + lvl);
       set('.h1b-f-degree', r.advancedDegree ? 'Yes' : 'No');
       set('.h1b-f-estimate', '~' + pct + '% (FY2027)');
-      set('.h1b-f-subject', 'VisaClock lead: H-1B odds ~' + pct + '% (Level ' + lvl + ')');
+      set('.h1b-f-subject', 'GreenCardETA lead: H-1B odds ~' + pct + '% (Level ' + lvl + ')');
       set('.gc-f-page', location.pathname);
     }
     function revealResult() { reveal.hidden = false; if (gate) gate.hidden = true; reveal.innerHTML = oddsResultHTML(pending); }

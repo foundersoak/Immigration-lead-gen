@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /* ============================================================
-   VisaClock - monthly Visa Bulletin refresher
+   GreenCardETA - monthly Visa Bulletin refresher
    Fetches the next unpublished month(s) of Employment-Based
    Final Action Dates from travel.state.gov and APPENDS them to
    data/visa-bulletin.json.
@@ -133,7 +133,7 @@ function serializeBulletin(data) {
 /* ---- networking ---- */
 function fetchHtml(url) {
   return new Promise((resolve, reject) => {
-    https.get(url, { headers: { 'User-Agent': 'Mozilla/5.0 (VisaClock bulletin refresher)' } }, res => {
+    https.get(url, { headers: { 'User-Agent': 'Mozilla/5.0 (GreenCardETA bulletin refresher)' } }, res => {
       if (res.statusCode === 404) { res.resume(); return resolve(null); }
       if (res.statusCode !== 200) { res.resume(); return reject(new Error('HTTP ' + res.statusCode + ' for ' + url)); }
       let body = '';

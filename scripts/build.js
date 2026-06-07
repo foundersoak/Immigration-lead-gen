@@ -1,6 +1,6 @@
 #!/usr/bin/env node
 /* ============================================================
-   VisaClock - static page generator
+   GreenCardETA - static page generator
    Reads:
      data/items.json          (visa-category entity pages + work-visa explainers)
      data/visa-bulletin.json  (DOS Final Action Dates history)
@@ -28,8 +28,8 @@ const BULLETIN = JSON.parse(fs.readFileSync(path.join(ROOT, 'data', 'visa-bullet
 const GUIDES = require('./guides-content.js');
 
 /* ---- Config ---- */
-const SITE_URL = 'https://YOURDOMAIN.com';      // no trailing slash; set to your domain
-const BRAND = 'VisaClock';                       // placeholder brand; swap once you pick a name
+const SITE_URL = 'https://greencardeta.com';      // no trailing slash; set to your domain
+const BRAND = 'GreenCardETA';                       // placeholder brand; swap once you pick a name
 const BRAND_TAGLINE = 'Know your green card timeline.';
 const ADSENSE_CLIENT = 'ca-pub-XXXXXXXXXXXXXXXX'; // your AdSense publisher id
 const FORMSPREE = 'https://formspree.io/f/your-form-id'; // your lead/email endpoint
