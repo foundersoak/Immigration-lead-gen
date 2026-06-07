@@ -113,6 +113,7 @@ p { margin: 0 0 1rem; }
 .gc-consent { display: flex; gap: .55rem; align-items: flex-start; font-size: .82rem; color: var(--muted); line-height: 1.45; font-weight: 400; cursor: pointer; }
 .gc-consent input { margin-top: .2rem; flex: 0 0 auto; width: 16px; height: 16px; }
 .gc-degree { margin: .2rem 0; }
+.gc-help { flex-basis: 100%; font-size: .82rem; color: var(--muted); margin: -.1rem 0 0; }
 .privacy-note { font-size: .78rem; color: var(--muted); margin: 0; }
 
 /* ---- reveal / result ---- */
