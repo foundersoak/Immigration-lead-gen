@@ -132,16 +132,16 @@ function head(opts) {
 <body>
   <header class="site-header">
     <div class="container nav">
-      <a class="brand" href="${prefix}index.html">
+      <a class="brand" href="/">
         <span class="brand-mark" aria-hidden="true">◷</span>
         <span class="brand-text">${esc(BRAND)}</span>
       </a>
       <nav class="nav-links">
-        <a href="${prefix}index.html">Green card wait</a>
-        <a href="${prefix}h1b-odds/index.html">H-1B odds</a>
-        <a href="${prefix}visa/index.html">Visa categories</a>
-        <a href="${prefix}guides/index.html">Guides</a>
-        <a class="nav-cta" href="${prefix}index.html#calculator">Estimate my wait</a>
+        <a href="/">Green card wait</a>
+        <a href="/h1b-odds/">H-1B odds</a>
+        <a href="/visa/">Visa categories</a>
+        <a href="/guides/">Guides</a>
+        <a class="nav-cta" href="/#calculator">Estimate my wait</a>
       </nav>
     </div>
   </header>
@@ -159,17 +159,17 @@ function foot(prefix) {
   <footer class="site-footer">
     <div class="container footer-grid">
       <div>
-        <a class="brand" href="${prefix}index.html"><span class="brand-mark" aria-hidden="true">◷</span><span class="brand-text">${esc(BRAND)}</span></a>
+        <a class="brand" href="/"><span class="brand-mark" aria-hidden="true">◷</span><span class="brand-text">${esc(BRAND)}</span></a>
         <p class="footer-tag">${esc(BRAND_TAGLINE)}</p>
       </div>
       <nav class="footer-links">
-        <a href="${prefix}index.html">Green card wait</a>
-        <a href="${prefix}h1b-odds/index.html">H-1B odds</a>
-        <a href="${prefix}visa/index.html">Visa categories</a>
-        <a href="${prefix}guides/index.html">Guides</a>
-        <a href="${prefix}contact.html">Contact</a>
-        <a href="${prefix}privacy.html">Privacy</a>
-        <a href="${prefix}terms.html">Terms</a>
+        <a href="/">Green card wait</a>
+        <a href="/h1b-odds/">H-1B odds</a>
+        <a href="/visa/">Visa categories</a>
+        <a href="/guides/">Guides</a>
+        <a href="/contact.html">Contact</a>
+        <a href="/privacy.html">Privacy</a>
+        <a href="/terms.html">Terms</a>
       </nav>
     </div>
     <div class="container footer-bottom">
@@ -221,7 +221,7 @@ function waitTool(opts) {
         <input type="tel" name="phone" placeholder="Phone (optional)" aria-label="Phone (optional)" class="gc-optional" />
         <label class="gc-consent"><input type="checkbox" name="consent" required /> <span>I agree that ${esc(BRAND)} may share my inquiry with one or more partner immigration law firms, who may contact me by email about my case. I can unsubscribe anytime.</span></label>
         <button type="submit" class="btn btn-primary">Unlock my projected date</button>
-        <p class="privacy-note">No spam. <a href="REPLACE_PREFIXprivacy.html">Privacy</a>.</p>
+        <p class="privacy-note">No spam. <a href="/privacy.html">Privacy</a>.</p>
       </form>
       <div class="gc-reveal" hidden></div>
     </div>
@@ -244,7 +244,7 @@ function leadForm(prefix, context) {
         <input type="text" name="country_of_birth" required placeholder="Country of birth" aria-label="Country of birth" />
         <label class="gc-consent"><input type="checkbox" name="consent" required /> <span>I agree that ${esc(BRAND)} may share my inquiry with one or more partner immigration law firms, who may contact me by email about my case. I can unsubscribe anytime.</span></label>
         <button type="submit" class="btn btn-primary">Request a consultation</button>
-        <p class="privacy-note">Informational service, not a law firm. <a href="${prefix}privacy.html">Privacy</a> · <a href="${prefix}terms.html">Terms</a>.</p>
+        <p class="privacy-note">Informational service, not a law firm. <a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a>.</p>
       </form>
     </div>
   </section>`;
@@ -258,7 +258,7 @@ function relatedLinks(item) {
   if (!links.length) return '';
   return `<section class="container narrow">
       <h2>Related categories</h2>
-      <div class="related-links">${links.map(i => `<a href="../../visa/${i.slug}/index.html">${esc(i.name)}</a>`).join('')}</div>
+      <div class="related-links">${links.map(i => `<a href="/visa/${i.slug}/">${esc(i.name)}</a>`).join('')}</div>
     </section>`;
 }
 
@@ -307,7 +307,7 @@ function bulletinPage(item) {
 
   return head({ title, desc, canonical: url, prefix, jsonld }) + `
     <section class="container narrow entity-hero">
-      <nav class="crumbs"><a href="${prefix}visa/index.html">Visa categories</a> › <span>${esc(item.name)}</span></nav>
+      <nav class="crumbs"><a href="/visa/">Visa categories</a> › <span>${esc(item.name)}</span></nav>
       <h1>${esc(item.name)} green card wait &amp; priority date</h1>
       <p class="entity-sub">${esc(item.blurb || '')}</p>
       ${publicText}
@@ -323,7 +323,7 @@ function bulletinPage(item) {
       <p>We take the recent month-over-month movement of the ${esc(item.name)} Final Action Date in the Visa Bulletin and project it forward to your priority date. Because movement is uneven (and sometimes negative), we show a best, likely and worst-case window rather than a single date. ${item.source ? `Source: <a href="${esc(item.sourceUrl)}" rel="nofollow noopener" target="_blank">${esc(item.source)}</a>.` : ''}</p>
       <div class="cta-inline">
         <p><strong>Worried about retrogression or a job change?</strong> These are exactly the moments to talk to an attorney.</p>
-        <a class="btn btn-secondary" href="${prefix}guides/index.html">Read the guides</a>
+        <a class="btn btn-secondary" href="/guides/">Read the guides</a>
       </div>
     </section>
     ${relatedLinks(item)}
@@ -343,7 +343,7 @@ function explainerPage(item) {
   };
   return head({ title, desc, canonical: url, prefix, jsonld }) + `
     <section class="container narrow entity-hero">
-      <nav class="crumbs"><a href="${prefix}visa/index.html">Visa categories</a> › <span>${esc(item.name)}</span></nav>
+      <nav class="crumbs"><a href="/visa/">Visa categories</a> › <span>${esc(item.name)}</span></nav>
       <h1>${esc(item.name)}</h1>
       <p class="entity-sub">${esc(item.blurb || '')}</p>
     </section>
@@ -352,7 +352,7 @@ function explainerPage(item) {
       <h2>Is the green card backlog affecting you?</h2>
       <p>If your path runs through an employment green card, your wait depends on your category and country of birth. Check your priority-date timeline:</p>
       <div class="cta-inline">
-        <a class="btn btn-primary" href="${prefix}index.html#wait">Open the green card wait estimator</a>
+        <a class="btn btn-primary" href="/#calculator">Open the green card wait estimator</a>
       </div>
       ${item.source ? `<p class="muted">Official reference: <a href="${esc(item.sourceUrl)}" rel="nofollow noopener" target="_blank">${esc(item.source)}</a>.</p>` : ''}
     </section>
@@ -378,7 +378,7 @@ function directoryPage() {
         const pub = bulletinPublic(it.category, it.country);
         meta = pub ? (pub.isCurrent ? 'Current' : fmtDate(pub.latestDate)) : '';
       }
-      return `<a class="entity-card" href="${prefix}visa/${it.slug}/index.html">
+      return `<a class="entity-card" href="/visa/${it.slug}/">
         <span class="ec-tag">${esc(tag)}</span>
         <strong>${esc(it.name)}</strong>
         <span class="ec-meta">${esc(meta || it.blurb.slice(0, 60))}</span>
@@ -395,7 +395,7 @@ function directoryPage() {
     ${adUnit()}
     <section class="container">${sections}
       <div class="cta-inline" style="margin-top:2rem">
-        <a class="btn btn-primary" href="${prefix}index.html#wait">Open the green card wait estimator</a>
+        <a class="btn btn-primary" href="/#calculator">Open the green card wait estimator</a>
       </div>
     </section>
   ` + foot(prefix);
@@ -413,13 +413,13 @@ function guidePage(g) {
   };
   return head({ title: `${g.title} | ${BRAND}`, desc: g.desc, canonical: url, prefix, jsonld }) + `
     <section class="container narrow article">
-      <nav class="crumbs"><a href="${prefix}index.html">Home</a> › <a href="${prefix}guides/index.html">Guides</a> › <span>${esc(g.title)}</span></nav>
+      <nav class="crumbs"><a href="/">Home</a> › <a href="/guides/">Guides</a> › <span>${esc(g.title)}</span></nav>
       <h1>${esc(g.title)}</h1>
       <p class="article-meta">Updated ${esc(g.date)}</p>
       ${g.body}
       <div class="cta-inline">
         <p><strong>Want a number for your own case?</strong> Estimate your green card wait in seconds.</p>
-        <a class="btn btn-primary" href="${prefix}index.html#wait">Open the wait estimator</a>
+        <a class="btn btn-primary" href="/#calculator">Open the wait estimator</a>
       </div>
     </section>
     ${adUnit()}
@@ -447,7 +447,7 @@ function guidesIndex() {
   const url = `${SITE_URL}/guides/`;
   const bySlug = new Map(GUIDES.map(g => [g.slug, g]));
   const used = new Set();
-  const card = g => `<a class="guide-card" href="${prefix}guide/${g.slug}/index.html"><strong>${esc(g.title)}</strong><span>${esc(g.desc)}</span></a>`;
+  const card = g => `<a class="guide-card" href="/guide/${g.slug}/"><strong>${esc(g.title)}</strong><span>${esc(g.desc)}</span></a>`;
   const sections = GUIDE_SECTIONS.map(sec => {
     const items = sec.slugs.map(s => bySlug.get(s)).filter(Boolean);
     items.forEach(g => used.add(g.slug));
@@ -507,7 +507,7 @@ function oddsTool(prefix) {
         <input type="text" name="country_of_birth" required placeholder="Country of birth" aria-label="Country of birth" />
         <label class="gc-consent"><input type="checkbox" name="consent" required /> <span>I agree that ${esc(BRAND)} may share my inquiry with one or more partner immigration law firms, who may contact me by email about my case. I can unsubscribe anytime.</span></label>
         <button type="submit" class="btn btn-primary">Show my odds</button>
-        <p class="privacy-note">No spam. <a href="${prefix}privacy.html">Privacy</a>.</p>
+        <p class="privacy-note">No spam. <a href="/privacy.html">Privacy</a>.</p>
       </form>
       <div class="h1b-reveal" hidden></div>
     </div>
@@ -528,7 +528,7 @@ function h1bOddsPage() {
         <p class="hero-sub">The FY2027 H-1B lottery is no longer a flat coin flip — it weights selection by wage level. Estimate your chance by wage level and degree. Free.</p>
         <a class="btn btn-primary btn-lg" href="#calculator">Estimate my odds ↓</a>
         <p class="hero-trust">Modeled estimate · Informational, not legal advice</p>
-        <p class="hero-alt">Already past the lottery? <a href="${prefix}index.html">Track your green card timeline →</a></p>
+        <p class="hero-alt">Already past the lottery? <a href="/">Track your green card timeline →</a></p>
       </div>
     </section>
     <section class="container calc-wrap" id="calculator">
@@ -556,7 +556,7 @@ function h1bOddsPage() {
         <div class="def-card"><h3>Prevailing wage</h3><p>The typical pay for your job and location, set by Department of Labor data. Your wage level is measured against it.</p></div>
         <div class="def-card"><h3>Cap-exempt</h3><p>Universities and nonprofit research employers can sponsor H-1Bs any time, outside the lottery entirely.</p></div>
       </div>
-      <p class="muted">Not selected? Read <a href="${prefix}guide/h1b-not-selected-options/index.html">your options after the H-1B lottery</a>.</p>
+      <p class="muted">Not selected? Read <a href="/guide/h1b-not-selected-options/">your options after the H-1B lottery</a>.</p>
     </section>
     ${leadForm(prefix, 'H-1B options')}
   ` + foot(prefix);
