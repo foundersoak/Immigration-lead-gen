@@ -167,6 +167,7 @@ function foot(prefix) {
         <a href="${prefix}h1b-odds/index.html">H-1B odds</a>
         <a href="${prefix}visa/index.html">Visa categories</a>
         <a href="${prefix}guides/index.html">Guides</a>
+        <a href="${prefix}contact.html">Contact</a>
         <a href="${prefix}privacy.html">Privacy</a>
         <a href="${prefix}terms.html">Terms</a>
       </nav>
@@ -593,7 +594,7 @@ const searchIndex = items.map(it => ({ slug: it.slug, name: it.name, group: it.g
 writeFile(path.join('assets', 'data', 'items-index.json'), JSON.stringify(searchIndex));
 
 /* stamp asset version + analytics into the hand-written static pages */
-['index.html', 'privacy.html', 'terms.html'].forEach(f => {
+['index.html', 'privacy.html', 'terms.html', 'contact.html'].forEach(f => {
   const fp = path.join(ROOT, f);
   if (!fs.existsSync(fp)) return;
   const out = fs.readFileSync(fp, 'utf8')
@@ -605,7 +606,7 @@ writeFile(path.join('assets', 'data', 'items-index.json'), JSON.stringify(search
 
 /* sitemap */
 const urls = [
-  `${SITE_URL}/`, `${SITE_URL}/h1b-odds/`, `${SITE_URL}/visa/`, `${SITE_URL}/guides/`, `${SITE_URL}/privacy.html`, `${SITE_URL}/terms.html`,
+  `${SITE_URL}/`, `${SITE_URL}/h1b-odds/`, `${SITE_URL}/visa/`, `${SITE_URL}/guides/`, `${SITE_URL}/contact.html`, `${SITE_URL}/privacy.html`, `${SITE_URL}/terms.html`,
   ...items.map(it => `${SITE_URL}/visa/${it.slug}/`),
   ...GUIDES.map(g => `${SITE_URL}/guide/${g.slug}/`)
 ];

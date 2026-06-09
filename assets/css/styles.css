@@ -179,6 +179,11 @@ p { margin: 0 0 1rem; }
 .guide-section { margin-top: 2.2rem; }
 .guide-section > h2 { margin: 0 0 .15rem; font-size: 1.35rem; }
 .guide-section-sub { margin: 0; color: var(--muted); font-size: .98rem; }
+/* ---- contact form ---- */
+.contact-form { display: grid; gap: .7rem; max-width: 520px; margin-top: 1.5rem; }
+.contact-form input, .contact-form select, .contact-form textarea { width: 100%; padding: .7rem .8rem; border: 1px solid var(--line); border-radius: 8px; font: inherit; background: var(--card); }
+.contact-form textarea { resize: vertical; }
+.contact-form .btn { justify-self: start; }
 .guide-list { display: grid; gap: .8rem; margin: 1rem 0; }
 .guide-card { background: var(--card); border: 1px solid var(--line); border-radius: var(--radius); padding: 1.1rem 1.2rem; display: grid; gap: .25rem; box-shadow: var(--shadow); }
 .guide-card:hover { box-shadow: var(--shadow-lg); text-decoration: none; transform: translateY(-2px); }
