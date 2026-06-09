@@ -136,7 +136,7 @@
         '<div class="gc-scn"><span>Worst case</span><strong>' + fmtMonthYear(res.slowDate) + '</strong><em>~' + durationText(res.slowMonths) + '</em></div>' +
       '</div>' +
       '<p class="gc-basis">Based on the ' + fmtBulletinMonth(res.bulletinMonth) + ' Visa Bulletin and an average movement of about ' + Math.round(res.paceDays) + ' day(s) per month. ' +
-      (retro ? '<strong>⚠️ This cutoff just retrogressed</strong> — projections can change sharply month to month. ' : '') +
+      (retro ? '<strong>⚠️ This cutoff just retrogressed</strong> - projections can change sharply month to month. ' : '') +
       'An estimate, not a guarantee.</p>' +
       waitContextHTML(res) +
       '<a class="btn btn-primary" href="' + BASE + 'guides/eb2-vs-eb3-downgrade/index.html">What can move my date faster?</a>' +
@@ -152,7 +152,7 @@
     set('.gc-f-category', res.category);
     set('.gc-f-country', res.countryLabel);
     set('.gc-f-estimate', est);
-    set('.gc-f-subject', 'GreenCardETA lead: ' + res.category.replace('EB', 'EB-') + ' ' + res.countryLabel + ' — ' + est);
+    set('.gc-f-subject', 'GreenCardETA lead: ' + res.category.replace('EB', 'EB-') + ' ' + res.countryLabel + ' - ' + est);
     set('.gc-f-page', location.pathname);
   }
 
@@ -279,7 +279,7 @@
       submitEmail(form, function () {
         var note = document.createElement('p');
         note.className = 'email-success';
-        note.textContent = "✅ Thanks — we'll be in touch by email.";
+        note.textContent = "✅ Thanks - we'll be in touch by email.";
         form.parentNode.replaceChild(note, form);
       });
     });

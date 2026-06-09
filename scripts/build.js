@@ -483,13 +483,13 @@ function oddsTool(prefix) {
     <form class="h1b-form">
       <label class="gc-field">Your offered wage level
         <select class="h1b-in-wage">
-          <option value="1">Level I — entry (~17th percentile)</option>
-          <option value="2" selected>Level II — qualified (~34th percentile)</option>
-          <option value="3">Level III — experienced (~50th percentile)</option>
-          <option value="4">Level IV — fully competent (~67th+ percentile)</option>
+          <option value="1">Level I - entry (~17th percentile)</option>
+          <option value="2" selected>Level II - qualified (~34th percentile)</option>
+          <option value="3">Level III - experienced (~50th percentile)</option>
+          <option value="4">Level IV - fully competent (~67th+ percentile)</option>
         </select>
       </label>
-      <p class="gc-help">Your wage level reflects how your offered salary compares to the U.S. Department of Labor prevailing wage for your specific <em>job and work location</em> — not your country.</p>
+      <p class="gc-help">Your wage level reflects how your offered salary compares to the U.S. Department of Labor prevailing wage for your specific <em>job and work location</em> - not your country.</p>
       <label class="gc-consent gc-degree"><input type="checkbox" class="h1b-in-degree" /> <span>I have a U.S. master's degree or higher (advanced-degree second draw)</span></label>
       <button type="submit" class="btn btn-primary">Estimate my odds</button>
     </form>
@@ -526,7 +526,7 @@ function h1bOddsPage() {
     <section class="hero">
       <div class="container narrow">
         <h1>What are your H-1B lottery odds?</h1>
-        <p class="hero-sub">The FY2027 H-1B lottery is no longer a flat coin flip — it weights selection by wage level. Estimate your chance by wage level and degree. Free.</p>
+        <p class="hero-sub">The FY2027 H-1B lottery is no longer a flat coin flip - it weights selection by wage level. Estimate your chance by wage level and degree. Free.</p>
         <a class="btn btn-primary btn-lg" href="#calculator">Estimate my odds ↓</a>
         <p class="hero-trust">Modeled estimate · Informational, not legal advice</p>
         <p class="hero-alt">Already past the lottery? <a href="/">Track your green card timeline →</a></p>
@@ -550,10 +550,10 @@ function h1bOddsPage() {
     <section class="container narrow info-block" id="terms">
       <h2>Key terms, in plain English</h2>
       <div class="defs-grid">
-        <div class="def-card"><h3>Wage Level (I–IV)</h3><p>How your offered salary compares to the U.S. prevailing wage for your specific job and work location (set by the Department of Labor) — <strong>not your country</strong>. Level I ≈ entry (~17th percentile), II ≈ qualified (~34th), III ≈ experienced (~50th), IV ≈ fully competent (~67th and up).</p></div>
+        <div class="def-card"><h3>Wage Level (I-IV)</h3><p>How your offered salary compares to the U.S. prevailing wage for your specific job and work location (set by the Department of Labor) - <strong>not your country</strong>. Level I ≈ entry (~17th percentile), II ≈ qualified (~34th), III ≈ experienced (~50th), IV ≈ fully competent (~67th and up).</p></div>
         <div class="def-card"><h3>The H-1B cap</h3><p>The annual limit on new cap-subject H-1Bs: 65,000 regular plus 20,000 reserved for U.S. advanced-degree holders.</p></div>
         <div class="def-card"><h3>Master's cap (second draw)</h3><p>A U.S. master's degree or higher gets you a second chance in the advanced-degree lottery, on top of the regular draw.</p></div>
-        <div class="def-card"><h3>Registration</h3><p>The short March window when your employer registers you for the lottery (FY2027 ran March 4–19, 2026).</p></div>
+        <div class="def-card"><h3>Registration</h3><p>The short March window when your employer registers you for the lottery (FY2027 ran March 4-19, 2026).</p></div>
         <div class="def-card"><h3>Prevailing wage</h3><p>The typical pay for your job and location, set by Department of Labor data. Your wage level is measured against it.</p></div>
         <div class="def-card"><h3>Cap-exempt</h3><p>Universities and nonprofit research employers can sponsor H-1Bs any time, outside the lottery entirely.</p></div>
       </div>

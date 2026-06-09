@@ -13,7 +13,7 @@
       "kind": "bulletin",
       "category": "EB2",
       "country": "India",
-      "blurb": "Employment-based second preference for India-born applicants — one of the most backlogged categories in the Visa Bulletin, with waits commonly measured in years.",
+      "blurb": "Employment-based second preference for India-born applicants - one of the most backlogged categories in the Visa Bulletin, with waits commonly measured in years.",
       "reported": true,
       "source": "DOS Visa Bulletin",
       "sourceUrl": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin.html"
@@ -49,7 +49,7 @@
       "kind": "bulletin",
       "category": "EB2",
       "country": "China",
-      "blurb": "Employment-based second preference for China (mainland-born) applicants — a heavily backlogged category second only to India.",
+      "blurb": "Employment-based second preference for China (mainland-born) applicants - a heavily backlogged category second only to India.",
       "reported": true,
       "source": "DOS Visa Bulletin",
       "sourceUrl": "https://travel.state.gov/content/travel/en/legal/visa-law0/visa-bulletin.html"
@@ -131,7 +131,7 @@
       "name": "EB-1A Extraordinary Ability",
       "group": "employment-based",
       "kind": "explainer",
-      "blurb": "A self-petitioned green card for people at the very top of their field — no employer or labor certification required.",
+      "blurb": "A self-petitioned green card for people at the very top of their field - no employer or labor certification required.",
       "reported": false,
       "source": "USCIS",
       "sourceUrl": "https://www.uscis.gov/working-in-the-united-states/permanent-workers/employment-based-immigration-first-preference-eb-1"
@@ -151,7 +151,7 @@
       "name": "PERM Labor Certification",
       "group": "employment-based",
       "kind": "explainer",
-      "blurb": "The Department of Labor step most EB-2 and EB-3 cases start with — it sets your priority date.",
+      "blurb": "The Department of Labor step most EB-2 and EB-3 cases start with - it sets your priority date.",
       "reported": false,
       "source": "U.S. Department of Labor",
       "sourceUrl": "https://flag.dol.gov/programs/PERM"
@@ -171,7 +171,7 @@
       "name": "H-1B Specialty Occupation Visa",
       "group": "work-visas",
       "kind": "explainer",
-      "blurb": "The main employer-sponsored work visa for specialty occupations — allocated by an annual lottery now weighted by wage level.",
+      "blurb": "The main employer-sponsored work visa for specialty occupations - allocated by an annual lottery now weighted by wage level.",
       "reported": false,
       "source": "USCIS",
       "sourceUrl": "https://www.uscis.gov/working-in-the-united-states/temporary-workers/h-1b-specialty-occupations"
@@ -181,7 +181,7 @@
       "name": "O-1 Extraordinary Ability Visa",
       "group": "work-visas",
       "kind": "explainer",
-      "blurb": "A work visa for individuals with extraordinary ability or achievement — a common path when the H-1B lottery doesn't come through. No annual cap.",
+      "blurb": "A work visa for individuals with extraordinary ability or achievement - a common path when the H-1B lottery doesn't come through. No annual cap.",
       "reported": false,
       "source": "USCIS",
       "sourceUrl": "https://www.uscis.gov/working-in-the-united-states/temporary-workers/o-1-visa-individuals-with-extraordinary-ability-or-achievement"
